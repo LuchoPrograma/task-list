@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit{
   }
 
   toggleAddTask(){
-    console.log("Creaste una task, chupapija!");
+    console.log("Agregaste una task!");
   }
 
 }
