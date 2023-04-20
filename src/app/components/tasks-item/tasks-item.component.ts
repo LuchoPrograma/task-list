@@ -5,6 +5,7 @@ import { TASKS } from 'src/app/mock-tasks';
 
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
+//componente hijo de tasks
 @Component({
   selector: 'app-tasks-item',
   templateUrl: './tasks-item.component.html',
