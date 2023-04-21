@@ -1,11 +1,15 @@
 <!-- Estructuramos y estilizamos como se verá cada item de tarea-->
 <!-- En vez de ngStyle es mas etico trabajar a lo clasico con hoja css y sistema de clases pero bueno es lo que hay-->
-<div class="task">
+<div class="task" 
+    [ngClass]="{reminder: task.reminder}"
+    (click)="onToggle(task)"    
+> <!-- Si es verdadero, se aplicara la clase con el estilo correspondiente... parece que ngClass recibe booleanos-->
     <h3>
         {{task.text}} 
         <fa-icon 
             [icon]="faTimes"
             [ngStyle] = "{'color': 'grey'}" 
+            (click)="onDelete(task)"
         ></fa-icon>
     </h3>
     <p>{{task.day}}</p>

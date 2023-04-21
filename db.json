@@ -1,28 +1,28 @@
-{"tasks":[
+{
+  "tasks": [
     {
-        "id": 1,
-        "text": "Tarea importante 1",
-        "day": "Abril 20 a las 10:00",
-        "reminder": true 
-
+      "id": 1,
+      "text": "Tarea importante 1",
+      "day": "Abril 20 a las 10:00",
+      "reminder": true
     },
     {
-        "id": 2,
-        "text": "Tarea importante 2",
-        "day": "Abril 21 a las 20:00",
-        "reminder": true
+      "id": 2,
+      "text": "Tarea importante 2",
+      "day": "Abril 21 a las 20:00",
+      "reminder": true
     },
     {
-        "id": 3,
-        "text": "Tarea importante 3",
-        "day": "Abril 23 a las 16:00",
-        "reminder": false
+      "id": 3,
+      "text": "Tarea importante 3",
+      "day": "Abril 23 a las 16:00",
+      "reminder": true
     },
     {
-        "id": 4,
-        "text": "Tarea importante 4",
-        "day": "Abril 23 a las 19:00",
-        "reminder": false
+      "id": 4,
+      "text": "Tarea importante 4",
+      "day": "Abril 23 a las 19:00",
+      "reminder": true
     }
-]
+  ]
 }

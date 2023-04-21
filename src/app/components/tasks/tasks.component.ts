@@ -29,4 +29,14 @@ export class TasksComponent {
     //TasksComponent obtiene los datos de la "base de datos" (arreglo TASKS en mock-tasks)
     this.taskService.getTask().subscribe((tasks)=>(this.tasks = tasks)); //con ayuda de Observable y su metodo subscibe
   }
+
+  deleteTask(task: Task){ //Hay formas mas bonitas de hacer esto
+    this.taskService.deleteTask(task).subscribe( () => (this.tasks = this.tasks.filter(t => t.id !== task.id) ) )
+    /*                                                                          ^filtra y devuelve todos los elementos distintos al que queremos borrar */
+  }
+
+  toggleReminder(task:Task){
+    task.reminder = !task.reminder //cambio para el frontend
+    this.taskService.updateTaskReminder(task).subscribe();// + actualizo el cambio para el backend, persistencia de la info
+  }
 }

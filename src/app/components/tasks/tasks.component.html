@@ -3,5 +3,9 @@
 <app-tasks-item 
     *ngFor="let task of tasks"
     [task]="task"
->  <!-- data binding estructural(bucle for) y property binding-->
+    (onDeleteTask)="deleteTask(task)"
+    (onToggleReminder)="toggleReminder(task)"
+>
+  <!-- data binding estructural(bucle for) y property binding-->
+
 </app-tasks-item>
