@@ -1,5 +1,9 @@
 <!-- Mostramos por pantalla cada tarea cargada en la base 
-    de datos (el arreglo que creamos en mock-tasks) -->
+    de datos -->
+<app-add-task
+  (onAddTask)="addTask($event)"
+
+></app-add-task> <!-- recibimos un evento(??? por qué esa sintaxis?)-->
 <app-tasks-item 
     *ngFor="let task of tasks"
     [task]="task"

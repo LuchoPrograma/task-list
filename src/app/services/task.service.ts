@@ -42,14 +42,18 @@ export class TaskService { //Creamos servicio encargado de administrar la "base 
   }
   */
 
-  deleteTask(task: Task): Observable<Task[]>{
+  deleteTask(task: Task): Observable<Task>{
     //const url = ${this.apiUrl}/${task.id}  //Tuve que usar una sintaxis mas casera porque la del pibe no funcionaba
-    return this.http.delete<Task[]>(this.apiUrl + "/" + task.id); //devuelve el elemento que queremos borrar(?)
+    return this.http.delete<Task>(this.apiUrl + "/" + task.id); //devuelve el elemento que queremos borrar(?)
   }
 
-  updateTaskReminder(task:Task): Observable<Task[]>{
+  updateTaskReminder(task:Task): Observable<Task>{
 
-    return this.http.put<Task[]>((this.apiUrl + "/" + task.id), task, httpOptions ); //con httOptions le informamos al backend que lo que mandamos es un json
+    return this.http.put<Task>((this.apiUrl + "/" + task.id), task, httpOptions ); //con httOptions le informamos al backend que lo que mandamos es un json
+  }
+
+  addTask(task:Task): Observable<Task>{
+    return this.http.post<Task>(this.apiUrl,task,httpOptions);
   }
   
 }
